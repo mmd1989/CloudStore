@@ -107,7 +107,7 @@ func (m *MinIO) Delete(objects ...string) (err error) {
 
 func (m *MinIO) GetSignURL(object string, expire int64) (link string, err error) {
 	if expire <= 0 {
-		link = m.Domain + objectAbs(object)
+		link = m.Domain + "/dochub-public1" +objectAbs(object)
 		return
 	}
 	if expire > sevenDays {
